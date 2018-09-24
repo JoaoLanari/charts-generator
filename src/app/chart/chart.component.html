@@ -1,0 +1,15 @@
+<div class="content">
+<mat-form-field>
+  <mat-select [(ngModel)]="selectedChart" placeholder="Escolha um Gráfico">
+    <mat-option *ngFor="let name of chartsNames" [value]="name">
+      {{ name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br />
+<button color="primary" mat-button (click)="selectedChartHandler()" ><b>Selecionar Gráfico</b></button>
+<hr />
+<div *ngIf="chart">
+  <canvas id="canvas">{{ chart }}</canvas>
+</div>
+</div>

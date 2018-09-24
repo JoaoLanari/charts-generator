@@ -1,0 +1,14 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu" class="my-menu">
+  <a routerLink="/" mat-menu-item>
+    <mat-icon>dashboard</mat-icon>
+    <span>Dashboard</span>
+  </a>
+  <a routerLink="/graficos" mat-menu-item>
+    <mat-icon>pie_chart</mat-icon>
+    <span>Gráficos</span>
+  </a>
+</mat-menu>
+

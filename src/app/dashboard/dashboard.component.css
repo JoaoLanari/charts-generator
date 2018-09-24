@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+}
+
+p {
+  color: black;
+  font-weight: 400;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#dasboard {
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+table {
+  margin-top: 50px;
+  width: 200px;
+  background-color: #f6f6f6;
+}
+
+button {
+  width: 150px;
+}

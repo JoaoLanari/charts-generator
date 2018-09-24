@@ -1,0 +1,47 @@
+<section id="dasboard">
+  <div>
+    <form class="form-group" (ngSubmit)="onSubmitData(form)" #form="ngForm">
+      <mat-form-field>
+        <input type="text" id="name" name="name" placeholder="Nome do campo" matInput [(ngModel)]="name">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" id="value" name="value" placeholder="Valor do campo" matInput [(ngModel)]="value">
+      </mat-form-field>
+      <button type="submit" color="primary" mat-button>
+        <b>Incluir Campo</b>
+      </button>
+    </form>
+    <hr />
+    <mat-form-field>
+      <input type="text" placeholder="Nome do gráfico" matInput [(ngModel)]="chartName">
+    </mat-form-field>
+    <br>
+    <button (click)="onSubmitChart()" color="primary" mat-button>
+      <b>Salvar Gráfico</b>
+    </button>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>
+            Nome
+          </th>
+          <th>
+            Valor
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item  of dataSource">
+          <td>
+            {{ item.name }}
+          </td>
+          <td>
+            {{ item.value }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
